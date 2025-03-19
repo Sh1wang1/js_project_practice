@@ -1,0 +1,69 @@
+*{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+}
+body{
+    background-color:black;
+}
+.all{
+    width:1000px;
+    height:60px;
+    display: flex;
+    align-items: center;
+    border:0;
+    outline:0;
+    background-color: white;
+    border-radius: 20px;
+    padding:8px 7px;
+    position: absolute;
+    top:85%;
+    left:50%;
+    transform: translate(-50%,-50%);
+  
+}
+button{
+    height:40px;
+    width:100%;
+    font-size: 16px;
+    border-radius: 12px;
+    padding:10px;
+   margin:10px;
+   color:white;
+   outline:0;
+   border: 0;
+}
+#red{
+    background-color: red;
+}
+#green{
+    background-color: green;
+}
+#blue{
+    background-color:blue;
+}
+#olive{
+    background-color: olive;
+}
+#gray{
+    background-color: gray;
+}
+#yellow{
+    background-color: yellow;
+}
+#pink{
+    background-color: pink;
+  
+    color:black;
+}
+#purple{
+    background-color: purple;
+}
+#white{
+    background-color: white;
+  color:black;
+  border: 1px solid black;
+}
+#black{
+    background-color: black;
+}

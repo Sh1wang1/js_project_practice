@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+   <div id="preloader"></div>
+   
+    <div class="product">
+        <div class="product-small-img">
+        <img src="bat.jpeg" onclick="toggle(this)">
+        <img src="iron.jpeg" onclick="toggle(this)">
+        <img src="spidy.jpeg" onclick="toggle(this)">
+        </div>
+        <div class="img-container">
+            <img src="bat.jpeg" id="hii">
+        </div>
+       
+    </div>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/ourQydxsjkg?si=U3s3PYMHsbGidPEe"
+    title="YouTube video player" frameborder="0"
+     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+     referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <script>
+         var fullimg=document.getElementById('hii')
+        function toggle(smallimg){
+            // var fullimg=document.getElementById('hii')
+            fullimg.src=smallimg.src
+        }
+    </script>
+   <script>
+    var loader=document.getElementById("preloader");
+
+    window.addEventListener("load",function(){
+        loader.style.display = "none";
+    })
+   </script>
+   
+</body>
+</html>

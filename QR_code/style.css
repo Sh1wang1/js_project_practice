@@ -1,0 +1,89 @@
+*{
+    padding:0;
+    margin:0;
+
+}
+body{
+    background-color: navy;
+}
+.container{
+  width:280px;
+  padding: 25px 35px;
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  border-radius: 10px;
+  background: white;
+  
+}
+.container h2{
+    font-size: 20px ;
+    padding: 10px;
+    margin-bottom: 8px;
+}
+.container input{
+    border:1px solid black;
+    outline:0;
+    padding:10px;
+    border-radius: 9px;
+    margin:10px 16px;
+    width:50px;
+    width:220px;
+}
+.container button{
+    border:1px solid black;
+    outline:0;
+    padding:10px;
+    border-radius: 9px;
+    margin:10px 16px;
+    width:50px;
+    width:240px;
+    cursor: pointer;
+    background-color: rgb(14, 14, 108);
+    color: white;
+   
+}
+.container button:hover{
+box-shadow: 10px 10px 20px rgb(6, 6, 106);
+}
+#imgBox{
+    width: 190px;
+    border-radius: 5px;
+    max-height: 0;
+    overflow:hidden;
+    transition:max-height 1s;
+    display: flex;
+    align-items: center;
+}
+#imgBox img{
+    width:180px;
+    padding:8px;
+
+}
+#imgBox.show-img{
+    max-height: 300px;
+    margin:8px auto;
+    border:1px solid #d1d1d1;
+
+}
+.error{
+    animation: shake 0.1s linear 10;
+}
+@keyframes shake{
+    0%{
+        transform: translateX(0);
+    }
+    25%{
+        transform: translateX(-2px);
+    }
+    50%{
+        transform: translateX(0);
+    }
+    75%{
+        transform: translateX(2px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}

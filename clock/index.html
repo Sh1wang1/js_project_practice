@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <div class="hero">
+        <div class="container">
+            <div class="clock">
+                <span id="hr">00</span>
+                <span>:</span>
+                <span id="min">00</span>
+                <span>:</span>
+                <span id="sec">00</span>
+                <span id="ampm"></span>
+            </div>
+        </div>
+    </div>
+    <script>
+        let hr=document.getElementById('hr');
+        let min=document.getElementById('min');
+        let sec=document.getElementById('sec');
+        let ampm=document.getElementById('ampm');
+        setInterval(()=>{
+        let currentTime=new Date();
+   let hour= currentTime.getHours();
+   let minute= currentTime.getMinutes();
+   let second= currentTime.getSeconds();
+ let ampmText=hour>=12?"PM":"AM";
+ hour=hour%12;
+ hour=hour?hour:12;
+ hr.innerHTML=(hour<10?"0":"")+hour;
+ min.innerHTML=(minute<10?"0":"")+minute;
+ sec.innerHTML=(second<10?"0":"")+second;
+ ampm.innerHTML=ampmText;},1000)
+    </script>
+</body>
+</html>

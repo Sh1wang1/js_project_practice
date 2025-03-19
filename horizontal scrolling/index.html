@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horizontal Scrolling</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+   <div class="wraps">
+    <img src="back.png" id="backBtn">
+        <div class="gallery">
+            <div class="hii">
+                <span><img src="all.jpeg"></span>
+                <span><img src="bat.jpeg"></span>
+                <span><img src="captain.jpeg"></span>
+            </div>
+            <div class="hii">
+                <span> <img src="iron.jpeg"></span>
+                <span><img src="spidy.jpeg"></span>
+                <span> <img src="th.jpeg"></span>
+            </div>
+        </div>
+        <img src="next.png" id="nextBtn">    
+    </div>
+       <script>
+        let scrollConatiner =document.querySelector(".gallery");
+        let backBtn =document.getElementById("backBtn");
+        let nextBtn =document.getElementById("nextBtn");
+
+        scrollConatiner.addEventListener("wheel", (evt)=>{
+            evt.preventDefault();
+            scrollConatiner.style.scrollBehavior="auto";
+            scrollConatiner.scrollLeft += evt.deltaY;
+        });
+
+
+        nextBtn.addEventListener("click",()=>{
+            scrollConatiner.style.scrollBehavior="smooth";
+        scrollConatiner.scrollLeft += 1000;
+
+        });
+        backBtn.addEventListener("click",()=>{
+            scrollConatiner.style.scrollBehavior="smooth";
+           scrollConatiner.scrollLeft -= 1000;
+            
+        });
+       </script> 
+</body>
+</html>

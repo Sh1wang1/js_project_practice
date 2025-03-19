@@ -1,0 +1,34 @@
+*{
+    padding: 0;
+    margin:0;
+}
+.meme{
+   margin:30px 10px;
+    text-align: center;
+}
+.meme img{
+    height: 430px;
+    object-fit: cover;
+}
+.meme h2{
+   margin-top: 30px;
+   font-size: 35px;
+}
+.but{
+    border-radius: 19px;
+    font-size: 20px;
+    background: linear-gradient(to right,pink,rgb(255, 0, 0));
+    border: 0;
+    outline: 0;
+    color:black;
+    padding: 10px 12px;
+  
+    cursor: pointer;
+}
+.but:hover{
+   
+    box-shadow: 5px 5px 10px rgb(0, 0, 0);
+}
+.memeAuthor{
+    margin:8px;
+}

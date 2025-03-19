@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stopwatch </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="all">
+        
+        <div  id="hero">
+        <h1 id="allTime">00:00:00</h1>
+        </div>
+        <div class="but">
+         <img src="stop.png" onclick="watchstop()">
+         <img src="start.png" onclick="watchstart()">
+         <img src="reset.png" onclick="watchreset()">
+        </div>
+    </div>
+    <script>
+        let sec = 0, min = 0, hr = 0;
+        let timer=null;
+        allTime=document.getElementById("allTime");
+        function stopWatch(){
+            sec++;
+            if(sec==60){
+                sec=0;
+                min++;
+                if(min==60){
+                    min=0;
+                    hr++;
+                }
+            }
+            let h=hr<10 ?"0"+hr:hr;
+            let m=min<10 ?"0"+min:min;
+            let s=sec<10 ?"0"+sec:sec;
+
+            allTime.innerHTML=h+":"+m+":"+s;
+        }
+        function watchstart(){
+            if(timer!=null){
+                clearInterval(timer);
+            }
+           timer = setInterval(stopWatch, 1000);
+          
+        }
+        function watchstop(){
+            clearInterval(timer);
+        }
+        function watchreset(){
+            clearInterval(timer);
+            sec = 0, min = 0, hr = 0;
+            allTime.innerHTML="00:00:00";
+        }
+
+    </script>
+</body>
+</html>

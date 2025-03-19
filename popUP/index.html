@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POP UP</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <div class="box">
+        <button class="btn" type="submit" onclick="openPop()">Submit</button>
+        <div class="pop" id="pop">
+            <h3>THANK YOU<span>!!!</span></h3>
+            <p>Your details has been successfully submitted.Thanks!</p>
+            <button type="button" onclick="closePop()">ok</button>
+        </div>
+    </div>
+    <script>
+        let pop=document.getElementById("pop");
+        function openPop(){
+            pop.classList.add("open-pops");
+        }
+        function closePop(){
+            pop.classList.remove("open-pops");
+        }
+    </script>
+</body>
+</html>

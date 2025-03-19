@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Linear Gradient Generator</title>
+    <link href="style.css" rel="stylesheet">
+  
+</head>
+<body>
+    <div class="container">
+        <div>
+            <button id="but" class="btn" onclick="magic()">Click!</button>
+        </div>
+        <div>
+          
+            <input type="text" id="input">
+            <button id="but1" class="btn" onclick="ccopy()">Copy code</button>
+        </div>
+    </div>
+    <script>
+      
+        function generateRandomColor() {
+            const r = Math.floor(Math.random() * 256);
+            const g = Math.floor(Math.random() * 256);
+            const b = Math.floor(Math.random() * 256);
+            return `rgb(${r}, ${g}, ${b})`;
+        }
+
+        function magic() {
+            const color1 = generateRandomColor();
+            const color2 = generateRandomColor();
+            const color3 = generateRandomColor();
+            
+            const finColor = `linear-gradient(${color1}, ${color2}, ${color3})`;
+            
+            document.body.style.background = finColor;
+            document.getElementById("input").value = finColor;
+        }
+
+        function ccopy(){
+           var cBox = document.getElementById("input");
+           cBox.select();
+           document.execCommand("copy");
+        }
+    </script>
+</body>
+</html>

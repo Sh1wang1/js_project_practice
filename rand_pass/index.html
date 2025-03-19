@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generating The Random Password</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+       <h1>Generate A<br><span>Random Password</span></h1>
+        <div class="in">
+            <input type="text" placeholder="Password" id="pass">
+            <img src="copy.png" onclick="ccopy()">
+        </div>
+        <button onclick="creatPass()" class="but">Generate Password</button>
+    </div>
+    <script>
+        const pasBox=document.getElementById("pass");
+        const length=12;
+        const upperCase="ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        const lowerCase="abcdefghijklmnopqrstuvwxyz";
+        const num="1234567890";
+        const sym="@#!$%^&*()" ;
+        const allChars=upperCase+lowerCase+num+sym;
+        function creatPass(){
+            let passe="";
+            passe+=upperCase[Math.floor(Math.random()*upperCase.length)];
+            passe+=lowerCase[Math.floor(Math.random()*lowerCase.length)];
+            passe+=num[Math.floor(Math.random()*num.length)];
+            passe+=sym[Math.floor(Math.random()*sym.length)];
+            while(length>passe.length){
+                passe+=allChars[Math.floor(Math.random()*allChars.length)]
+            }
+            pasBox.value=passe;
+            
+        }
+        function ccopy(){
+                pasBox.select();
+                document.execCommand("copy");
+            }
+    </script>
+</body>
+</html>

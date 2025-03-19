@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background color</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <div class="all">
+        
+        <button id="red" onclick="colo(this)">Red</button>
+           <button id="green" onclick="colo(this)">Green</button> 
+    
+            <button id="blue" onclick="colo(this)">Blue</button>
+     
+            <button id="olive" onclick="colo(this)">olive</button>
+
+            <button id="gray" onclick="colo(this)">Gray</button>
+      
+            <button id="yellow" onclick="colo(this)">Yellow</button>
+      
+            <button id="pink" onclick="colo(this)">Pink</button>
+  
+            <button id="purple" onclick="colo(this)">Purple</button>
+   
+            <button id="white" onclick="colo(this)">White</button>
+
+            <button id="black" onclick="colo(this)">Black</button>
+     
+    </div>
+    <script>
+       
+        function colo(colors) {
+        const color = colors.id;
+        document.body.style.backgroundColor = color;
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+*{
+    padding: 0;
+    margin:0;
+    
+}
+.product-small-img img{
+    height:92px;
+    cursor: pointer;
+    margin:10px 0;
+    display:block;
+    opacity: 0.6;
+    border:1px solid black;
+    box-shadow:2px 2px 10px black;
+}
+.product-small-img img:hover{
+    opacity: 1;
+}
+.product-small-img{
+    float:left;
+}
+.product{
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    position:absolute;
+    display: flex;
+    align-items: center;
+}
+.img-container img{
+    height:300px;
+     border:1px solid black;
+     box-shadow:2px 2px 10px black;
+ }
+ .img-container{
+    float:right;
+    padding: 10px;
+ }
+#preloader{
+    height: 100vh;
+    position: fixed;
+    background: #000 url("Fading\ word.gif") center no-repeat;
+    background-size:13%;
+  
+    z-index: 100;
+    width:100%;
+}
+iframe{
+    display: none;
+}

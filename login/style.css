@@ -1,0 +1,119 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.all{
+    width:100%;
+   height:100vh;
+    background-position: center;
+    background: url(banner.jpg);
+    background-size: cover;
+
+    
+}
+.box{
+    background-color: white;
+    width: 300px;
+    height: 400px;
+    display: flex;
+    position: absolute;
+   top:50%;
+   left:50%;
+   transform: translate(-50%,-50%);
+    align-items: center;
+    justify-content: center;
+    border-radius: 7px;
+    box-shadow: 9px 9px 20px rgb(77, 203, 215);
+    overflow: hidden;
+
+}
+.btn{
+    box-shadow: 5px 5px 20px pink;
+    border-radius: 30px;
+   position: absolute;
+    width:220px;
+ margin-top:-290px;
+}
+.log,.reg{
+    padding: 12px 30px;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    outline:0;
+    position: relative;
+}
+#colo{
+    background: linear-gradient(to left,#ff105f,#ffad06);
+    border-radius: 30px;
+    top:0;
+    left:0;
+    position: absolute;
+    height: 100%;
+    width: 110px;
+    transition:0.5s;
+}
+.icon{
+    text-align: center;
+  cursor: pointer;
+position: absolute;
+display: flex;
+
+ top:50%;
+left:50%;
+transform: translate(-50%,-50%);
+margin-top: -80px;
+
+
+}
+.icon img{
+    height: 30px;
+    width:30px;
+    border-radius: 50%;
+ margin:0 12px;
+}
+.input-group{
+    top:140px;
+    width:250px;
+    position: absolute;
+    transition: 0.5s;
+}
+.input{
+    background: transparent;
+    outline:none;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 1px solid black;
+    width:100%;
+    margin:5px 0;
+    padding:9px 0;
+    
+}
+.submit-btn{
+    cursor: pointer;
+    outline:none;
+    border: 0;
+    background: linear-gradient(to left,#ff105f,#ffad06);
+    width:85%;
+    padding:10px 30px;
+    margin: auto;
+    border-radius: 30px;
+    display: block;
+}
+.chehk{
+margin:20px 10px 20px 0;
+}
+span{
+    color:#777;
+    font-size: 15px;
+    position: absolute;
+    bottom:53px;
+}
+#login{
+    left:30px;
+}
+#register{
+    left:400px;
+
+}
