@@ -1,4 +1,3 @@
-
 let user = 0;
 let comp = 0;
 const choices = document.querySelectorAll(".choice");
@@ -6,38 +5,50 @@ const msg = document.querySelector("#msg");
 const users = document.querySelector("#user");
 const comps = document.querySelector("#comp");
 
+const clickSound = new Audio("sound/click.mp3");
+const winSound = new Audio("sound/win.mp3");
+const loseSound = new Audio("sound/lose.mp3");
+
+
 const gameChoice = () => {
     const options = ["rock", "paper", "scissor"];
     const randIdx = Math.floor(Math.random() * 3);
     return options[randIdx];
-}
+};
+
 
 const drawGame = () => {
-    console.log("Game was draw");
-    msg.innerText = "Game was draw, Play again";
+    console.log("Game was a draw");
+    msg.innerText = "It's a Draw! Play again.";
     msg.style.backgroundColor = "black";
-}
+};
+
 
 const showWinner = (userWin, userChoice, compChoice) => {
     if (userWin) {
         console.log("You Win");
         user++;
         users.innerText = user;
-        msg.innerText = `You Win! Your ${userChoice} beats ${compChoice}`;
+        msg.innerText = ` You Win! Your ${userChoice} beats ${compChoice}`;
         msg.style.backgroundColor = "green";
+        winSound.play(); 
     } else {
         console.log("You Lose");
         comp++;
         comps.innerText = comp;
-        msg.innerText = `You Lost!${compChoice} beats ${userChoice}`;
+        msg.innerText = ` You Lost! ${compChoice} beats ${userChoice}`;
         msg.style.backgroundColor = "red";
+        loseSound.play(); 
     }
-}
+};
 
 const playGame = (userChoice) => {
-    console.log(userChoice);
+    clickSound.play(); 
+    console.log(`User Choice: ${userChoice}`);
+    
     const compChoice = gameChoice();
-    console.log(compChoice);
+    console.log(`Computer Choice: ${compChoice}`);
+
     if (userChoice === compChoice) {
         drawGame();
     } else {
@@ -51,7 +62,7 @@ const playGame = (userChoice) => {
         }
         showWinner(userWin, userChoice, compChoice);
     }
-}
+};
 
 choices.forEach((choice) => {
     choice.addEventListener("click", () => {
@@ -59,3 +70,12 @@ choices.forEach((choice) => {
         playGame(userChoice);
     });
 });
+
+window.onload = () => {
+    user = 0;
+    comp = 0;
+    users.innerText = user;
+    comps.innerText = comp;
+    msg.innerText = "Play your move!";
+    msg.style.backgroundColor = "black";
+};
