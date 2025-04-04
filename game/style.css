@@ -1,58 +1,112 @@
-*{
+* {
     padding: 0;
-    margin:0;
+    margin: 0;
     text-align: center;
+    font-family: 'Poppins', sans-serif;
 }
-h1{
-    background: black;
+
+body {
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
     color: white;
-    height:5rem;
-    line-height: 5rem;
-   
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
-.choice{
-    height:165px;
+
+h1 {
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    height: 5rem;
+    line-height: 5rem;
+    width: 100%;
+    font-size: 2rem;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.choices {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    margin-top: 3rem;
+}
+
+.choice {
+    height: 165px;
     width: 165px;
     border-radius: 50%;
+    transition: transform 0.2s ease-in-out;
+    box-shadow: 0 5px 10px rgba(255, 255, 255, 0.3);
 }
-.choice:hover{
+
+.choice:hover {
     cursor: pointer;
-    opacity: 0.5;
-    
+    transform: scale(1.1);
+    opacity: 0.8;
 }
-img{
-    height:150px;
+
+img {
+    height: 150px;
     width: 150px;
     object-fit: cover;
     border-radius: 50%;
 }
-.choices{
+
+.score-board {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap:3rem;
-    margin-top: 5rem;
-}
-.score-board{
-     display: flex;
-    justify-content: center;
-    align-items: center;
     font-size: 2rem;
-    margin-top: 5rem;
-    gap: 2rem;
+    margin-top: 3rem;
+    gap: 3rem;
 }
-#user,#comp{
-    font-size: 4rem;
+
+.score {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
-#msg{
-    background-color: black;
+
+#user,
+#comp {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+#msg {
+    background: black;
     color: white;
-    height: 5rem;
-    font-size: 2rem;
-    padding: 1rem;
-    border-radius: 1rem;
-    display: inline;
+    height: auto;
+    font-size: 1.8rem;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    display: inline-block;
+    margin-top: 2rem;
+    transition: all 0.3s ease-in-out;
 }
-.msg-container{
-    margin-top: 2.5rem;
+
+.msg-container {
+    margin-top: 2rem;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25%, 75% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.shake {
+    animation: shake 0.3s ease-in-out;
 }
