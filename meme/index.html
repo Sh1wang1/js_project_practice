@@ -3,17 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Random Meme Generator</title>
+    <title>Meme Generator with Calendar & Clock</title>
     <link href="style.css" rel="stylesheet">
 </head>
 <body>
-  <div class="meme">
-    <button class="but">Generate Meme</button>
-    <h2 class="memeTitle">Loading...</h2>
-    <img src="" class="memeImg">
-    <div class="memeAuthor"></div>
-  </div>
-    
+    <div class="date-time">
+        <div class="container">
+            <div class="clock">
+                <span id="hr">00</span>
+                <span>:</span>
+                <span id="min">00</span>
+                <span>:</span>
+                <span id="sec">00</span>
+                <span id="ampm"></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="meme-container">
+        <div class="meme">
+            <button class="but">Generate Meme</button>
+            <h2 class="memeTitle">Loading...</h2>
+            <img src="" class="memeImg" alt="Meme">
+            <div class="memeAuthor"></div>
+        </div>
+    </div>
+
+    <div class="calendar-container">
+        <div class="calendar">
+            <div class="left">
+                <p id="date">12</p>
+                <p id="day">Sunday</p>
+            </div>
+            <div class="right">
+                <p id="month">January</p>
+                <p id="year">2020</p>
+            </div>
+        </div>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
