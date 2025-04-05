@@ -104,10 +104,10 @@ body {
 
 .meme {
     text-align: center;
-    background: white;
+    background:transparent;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 2px 4px 10px rgb(255, 255, 255);
     width: 400px; 
     height: 540px;
 }
@@ -119,16 +119,18 @@ body {
     
 }
 .memeTitle {
-    color: #2d2d33;
+    color: #ffffff;
     font-size: 25px;
-
-  }
   
+  }
+.memeAuthor{
+    color:azure;
+} 
 .but {
     margin: 20px;
     padding: 12px 20px;
     font-size: 22px;
-    background: linear-gradient(to right, rgb(83, 83, 83), rgb(206, 206, 243));
+    background: linear-gradient(to right, rgb(77, 70, 70), rgb(206, 206, 243));
     border: none;
     color: black;
     border-radius: 20px;
